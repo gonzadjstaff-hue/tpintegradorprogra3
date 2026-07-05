@@ -1,0 +1,35 @@
+<!-- Aca incluimos los fragmentos del <head> y del <header> -->
+<%- include("partials/head.ejs") %>
+<%- include("partials/nav.ejs") %> 
+
+    <main>
+
+        <section class="secccion-productos">
+
+            <!-- Recibimos la variable about -->
+            <h2> <%= about %>  </h2>
+            <div id="contenedor-productos">
+
+                <!-- Inicio del forEach -->
+                <% productsArray.forEach(producto => { %> 
+
+                    <div class="card-producto <% if (producto.activo === 0) { %>card-producto-inactivo<% } %>">
+                        <div class="img-prod">
+                            <img src="<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                        </div>
+                        <h4><%=producto.nombre%></h4>
+                        <p>Id: <%=producto.id%></p>
+                        <p>$<%=producto.precio%></p>
+                        <button class=" boton cambiarEstado" onclick="cambiarEstado(<%=producto.id%>)"> Des/activar </button>
+
+                    </div>
+
+                <!-- Cierre del forEach -->
+                <% }) %>  
+            </div>
+
+        </section>
+    </main>
+    <script src="/js/index.js"></script>
+
+<%- include("partials/footer.ejs") %> 

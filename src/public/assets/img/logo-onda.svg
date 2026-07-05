@@ -1,0 +1,39 @@
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B2FF7"/>
+      <stop offset="55%" stop-color="#FF2FD1"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <linearGradient id="gradGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#7B2FF7"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="320" fill="#0B0B12"/>
+
+  <!-- Barras de onda de sonido que se transforman en rayo de luz -->
+  <g filter="url(#softGlow)">
+    <rect x="80"  y="150" width="14" height="20"  rx="7" fill="url(#gradPrimary)"/>
+    <rect x="104" y="130" width="14" height="60"  rx="7" fill="url(#gradPrimary)"/>
+    <rect x="128" y="105" width="14" height="110" rx="7" fill="url(#gradPrimary)"/>
+    <rect x="152" y="80"  width="14" height="160" rx="7" fill="url(#gradPrimary)"/>
+    <rect x="176" y="60"  width="14" height="200" rx="7" fill="url(#gradPrimary)"/>
+    <rect x="200" y="40"  width="14" height="240" rx="7" fill="url(#gradGlow)"/>
+    <!-- rayo de luz que continua la linea de las barras -->
+    <polygon points="224,20 240,20 300,160 260,160" fill="url(#gradGlow)" opacity="0.85"/>
+    <polygon points="234,160 260,160 300,160 274,270" fill="url(#gradGlow)" opacity="0.55"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="335" y="175" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" letter-spacing="4" fill="#F5F5F7">ONDA</text>
+  <text x="337" y="205" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" letter-spacing="6" fill="#00E5FF">LUCES &amp; SONIDO</text>
+</svg>

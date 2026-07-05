@@ -1,0 +1,236 @@
+:root {
+    --msg-error-bg: #f8d7da;
+    --msg-error-color: #58151c;
+    --msg-error-border: #f1aeb5;
+    --msg-exito-bg: #d1e7dd;
+    --msg-exito-color: #0a3622;
+    --msg-exito-border: #a3cfbb;
+
+    --header-bg: #0B0B12;
+    --body-bg: #20202b;
+    --text-color: #F5F5F7;
+    --color-ppal: blueviolet;
+    --color-sec: rgb(66, 21, 107);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: "Merienda", Arial, Helvetica, sans-serif;
+    background-color: var(--header-bg);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20dvw;
+    position: static;
+    top: 0;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 100px;
+    min-height: 500px;
+}
+
+/* header > * {
+    border: grey 2px solid;
+} */
+
+body {
+    background-color: var(--body-bg);
+    display: flex;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--color-ppal);
+}
+
+.form-logout {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.boton {
+    background-color: var(--color-ppal);
+    color: var(--text-color);
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Merienda"
+
+}
+
+.boton:hover {
+    background-color: var(--color-sec);
+
+}
+
+.boton-form {
+    padding: 10px;
+}
+
+.logo-container {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Merienda";
+    color: var(--text-color);
+    background-color: var(--header-bg);
+    width: 79.7vw;
+    padding: 10px;
+    border-radius: 0 5px 50px 0;
+
+}
+
+/* Contenedores producto */
+.card-producto {
+    font-family: "Merienda";
+    background-color: var(--color-ppal);
+    color: var(--text-color);
+    width: 180px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px 4px 20px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.card-producto-inactivo {
+    opacity: 0.3;
+}
+
+.img-prod {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.img-prod img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#contenedor-productos ul {
+    margin-top: 20px;
+    width: 100%;
+    /* border: 1px solid; */
+    padding-left: 0;
+}
+
+.lista-producto {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid; */
+    width: 100%;
+    justify-content: space-around;
+}
+
+.lista-producto img {
+    width: 70px;
+    border-radius: 5px;
+}
+
+.lista-producto p {
+    font-size: 14px;
+}
+
+.lista-producto img,
+.lista-producto p {
+    margin-bottom: 0;
+}
+
+.form-container {
+    font-family: "Merienda";
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+.form-alta {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#deleteProduct-button {
+    margin-bottom: 0;
+}
+
+/*
+.mensaje-error {
+    color: var(--msg-error-color);
+    background-color: var(--msg-error-bg);
+    border: 1px solid var(--msg-error-border);
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+*/
+
+#updateProduct-form {
+    margin-top: 20px;
+}
+
+.mensaje {
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.mensaje-error {
+    color: var(--msg-error-color);
+    background-color: var(--msg-error-bg);
+    border: 1px solid var(--msg-error-border);
+}
+
+.mensaje-exito {
+    color: var(--msg-exito-color);
+    background-color: var(--msg-exito-bg);
+    border: 1px solid var(--msg-exito-border);
+}

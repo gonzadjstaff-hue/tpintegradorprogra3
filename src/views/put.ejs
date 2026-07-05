@@ -1,0 +1,31 @@
+<!-- Aca incluimos los fragmentos del <head> y del <header> -->
+<%- include("partials/head.ejs") %>
+    <%- include("partials/nav.ejs") %>
+
+        <main>
+
+            <section>
+                <h2>
+                    <%= about %>
+                </h2>
+                <div class="form-container">
+
+                    <form id="getProduct-form">
+                        <label for="idProd">Id del producto</label>
+                        <input type="number" name="idProd" id="idProd" required>
+                        <div class="boton-form">
+                            <input class="boton"type="submit" value="Consultar producto">
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="secccion-productos">
+                <div id="contenedor-productos"></div>
+                <div id="contenedor-form"></div>
+            </section>
+        </main>
+
+        <script src="/js/put.js"></script>
+
+        <%- include("partials/footer.ejs") %>
